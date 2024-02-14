@@ -71,7 +71,6 @@ app.post("/github-event", (req: Request, res: Response) => {
         message = `${sender.login} ${action} issue ${issue.title} on ${repository.full_name}`;
         break;
       case "push":
-        console.log('Si entro');
         message = `${sender.login} pushes on ${repository.full_name}`;
         break;
       case "star":
